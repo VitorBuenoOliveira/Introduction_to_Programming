@@ -1,0 +1,5 @@
+Dia 14/02/2023
+
+Atribuição de Variáveis
+
+X(Nome da Variavel) = Valor (Atribuição de Valor)
