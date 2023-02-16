@@ -3,3 +3,12 @@ Dia 14/02/2023
 Atribuição de Variáveis
 
 X(Nome da Variavel) = Valor (Atribuição de Valor)
+
+
+a + b
+a - b
+a * b
+a / b
+a // b Só trás valor inteiro
+a % b
+
