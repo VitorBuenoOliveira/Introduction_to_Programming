@@ -11,4 +11,6 @@ a * b
 a / b
 a // b Só trás valor inteiro
 a % b
+ 
+Obs: AND Tem Prioridade do que OR
 
