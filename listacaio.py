@@ -15,9 +15,9 @@ print(texto,soma)
 #Calculo de Fahrenheit
 Temp = float(input("Digite sua Temperatura: ")) 
 Fah = 1.8 * Temp + 32
-Cel = 1.8 * Temp - 32
+Cel = (Temp - 32) / 1.8
 
-print(Fah,Cel)
+print(type(Fah),Fah,type(Cel),Cel)
 #
 
 #
@@ -28,6 +28,21 @@ P = 2 * 3.14 * r
 A = 3.14 * (r*r)
 
 print(P,A)
+
+
+#Jeito do Professor
+
+raio = 10
+pi = 3.14
+#Operação
+perimetro = 2 * pi * raio
+area = pi * (raio * * 2)
+
+print(f'o perimetro da circunferencia é {Perimetro}')
+print(f' A area do circulo é {area}')
+#
+
+
 #
 
 #
@@ -39,6 +54,7 @@ horas = min // 60
 minutos = min % 60
 
 print("Horas:",horas,"Minutos",minutos,)
+
 
 #
 
