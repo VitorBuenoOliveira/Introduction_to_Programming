@@ -29,3 +29,22 @@ if 39.99 < Cal < 40:
 
 
   ###
+
+
+  ###
+  # Jogo de Adivinhar o numero
+from random import randint
+
+num = randint(1, 10)
+num
+
+val = int(input("Chute um numero: "))
+if val > num:
+  print("Seu numero é maior que o num")
+if val < num:
+  print("Seu numero é menor que o num")
+if val == num:
+  print("Você Ganhou o jogo")
+
+print(num)
+##
