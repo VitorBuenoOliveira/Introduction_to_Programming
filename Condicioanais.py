@@ -48,3 +48,32 @@ if val == num:
 
 print(num)
 ##
+
+###
+#3 Jogo do Impar e par sem o operador (+)
+from random import randint
+escolha_paridade = input('escolha seu impar ou par: ')
+
+num_computador = randint(1, 100)
+
+num_usuario = int(input('Escolha seu número: '))
+
+paridade_computador = num_computador % 2
+
+paridade_usuario = num_usuario % 2
+
+paridade_final = 'par'
+
+if(paridade_computador == 0 and paridade_usuario !=0) or (paridade_computador !=0 and paridade_usuario == 0):
+  paridade_final = 'impar'
+
+if paridade_computador !=paridade_usuario:
+  paridade_final = 'impar'
+if paridade_final == escolha_paridade:
+  print('Você ganhou')
+else:
+  print('eu ganhei')
+
+print(num_computador,num_usuario)
+
+###
