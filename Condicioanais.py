@@ -77,3 +77,29 @@ else:
 print(num_computador,num_usuario)
 
 ###
+
+###
+#4
+temperatura = float(input("Digite a temperatura da água em graus Celsius: "))
+
+if temperatura < 0:
+    print("A água está no estado sólido (gelada)")
+elif temperatura >= 0 and temperatura < 100:
+    print("A água está no estado líquido")
+else:
+    print("A água está no estado gasoso (vapor)")
+
+
+###
+
+###
+#5
+
+s = str(input("Digite uma palavra: "))
+
+if 'a'or 'e'or 'i'or 'o' or'u' in s:
+    print('tem vogal')
+else:
+    print('não tem vogal')
+###
+

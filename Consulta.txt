@@ -14,3 +14,4 @@ a % b
  
 Obs: AND Tem Prioridade do que OR
 
+
