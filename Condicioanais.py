@@ -28,11 +28,11 @@ if 39.99 < Cal < 40:
 
 
 
-  ###
+###
 
 
-  ###
-  # Jogo de Adivinhar o numero
+###
+#Jogo de Adivinhar o numero
 from random import randint
 
 num = randint(1, 10)
@@ -47,7 +47,37 @@ if val == num:
   print("Você Ganhou o jogo")
 
 print(num)
-##
+###
+#1
+num = float(input("Digite um numero de 1 a 5: "))
+
+
+if num == 1:
+    print("Seu numero não é primo: ")
+elif num == 4:
+    print("Seu numero não é primo")
+else:
+    print("Seu numero é primo")
+###
+
+###
+#2
+from random import randint
+
+num1 = randint(1,10)
+
+print(num1)
+num2 = float(input("Digite seu numero: "))
+
+if num1 > num2:
+   print("O valor numero1 é maior que o numero2")
+if num2 > num1:
+   print("O valor numero2 é maior que o numero1")
+else:
+   print("Eles são iguais")
+###
+
+###
 
 ###
 #3 Jogo do Impar e par sem o operador (+)
