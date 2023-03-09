@@ -28,7 +28,7 @@ if abs(a) < abs(b) + abs(c) and abs(b) < abs(a) + abs(c) and abs(c) < abs(a) + a
         print("Triângulo isósceles")
 else:
     print("Os valores informados não formam um triângulo.")
-
+        
 ###
 
 #Exerc 3
@@ -114,4 +114,4 @@ elif escolha_computador == 'tesoura' and minha_escolha == 'pedra':
     print(f'Você Ganhou {escolha_computador} X {minha_escolha}')
 
 
-###
+### 

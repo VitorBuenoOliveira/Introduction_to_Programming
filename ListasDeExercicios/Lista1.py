@@ -36,9 +36,9 @@ raio = 10
 pi = 3.14
 #Operação
 perimetro = 2 * pi * raio
-area = pi * (raio * * 2)
+area = pi * (raio ** 2)
 
-print(f'o perimetro da circunferencia é {Perimetro}')
+print(f'o perimetro da circunferencia é {perimetro}')
 print(f' A area do circulo é {area}')
 #
 
