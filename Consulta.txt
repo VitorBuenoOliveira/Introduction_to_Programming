@@ -14,4 +14,5 @@ a % b
  
 Obs: AND Tem Prioridade do que OR
 
-
+%%time = "Decorador" serve para demonstrar 
+quanto tempo demorou para fazer o processo.
