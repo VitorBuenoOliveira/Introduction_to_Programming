@@ -57,3 +57,23 @@ else:
     print('nenhum número foi encontrado')
 
 
+# Escreva um programa que pede para o usuário acertar o nome de uma fruta em 10 tentativas. 
+# A cada interação, o programa deve imprimir o número de tentativas e pedir para que o usuário escolha uma fruta. 
+# Caso o usuário acerte a fruta, o programa deve imprimir "Parabéns, você acertou!". 
+# Caso o usuário escreva "desisto", o programa deve imprimir "ok, 
+# obrigado pela participação". No caso de todas as tentativas se esgotarem, 
+# o programa deve imprimir "Suas tentativas acabaram e você não acertou".
+
+### Fase Beta ###
+frutas = ["abacaxi","banana"]
+tenta = 0
+for x in range(10):
+    tenta += 1
+    escolha =  input(f"Tentativa {tenta}.Escolha uma fruta: ")
+
+    if escolha.lower() == "desisto":
+        print("Obrigado pela participação")
+        break
+    if escolha.lower() in frutas:
+        print("Parabéns, você acertou!")
+        break

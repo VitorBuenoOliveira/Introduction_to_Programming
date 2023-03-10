@@ -1,16 +1,27 @@
-f = str(input('Adivinhe uma fruta: '))
-tentativas = 10
+# lista com as frutas disponíveis para o jogo
 
-for t in range(tentativas+1):
-    if f == 'banana':
-        print('Você Ganhou o Jogo')
-        break
-    if f !='banana':
-        print('Você Errou a fruta')
-        tentativas += 1
-    if tentativas == 10:
-        print('Acabou suas tentativas')
-    if f == 'desistir':
-        print('Obrigado')
-        break
+# frutas = ["abacaxi", "banana", "maçã", "morango", "laranja", "uva", "manga", "melancia", "limão", "kiwi"]
+
+# # contador de tentativas
+# tentativas = 0
+
+# # loop para 10 tentativas
+# while tentativas < 10:
+#     tentativas += 1
+#     # entrada do usuário
+#     escolha = input(f"Tentativa {tentativas}. Escolha uma fruta: ")
+
+#     # verificação se o usuário desistiu
+#     if escolha.lower() == "desisto":
+#         print("Ok, obrigado pela participação.")
+#         break
+
+#     # verificação se o usuário acertou
+#     if escolha.lower() in frutas:
+#         print("Parabéns, você acertou!")
+#         break
+
+# # mensagem de encerramento
+# if tentativas == 10:
+#     print("Suas tentativas acabaram e você não acertou.")
     
