@@ -56,7 +56,7 @@ for num in range(1, intervalo+1):
 else:
     print('nenhum número foi encontrado')
 
-
+##################################
 # Escreva um programa que pede para o usuário acertar o nome de uma fruta em 10 tentativas. 
 # A cada interação, o programa deve imprimir o número de tentativas e pedir para que o usuário escolha uma fruta. 
 # Caso o usuário acerte a fruta, o programa deve imprimir "Parabéns, você acertou!". 
@@ -77,3 +77,17 @@ for x in range(10):
     if escolha.lower() in frutas:
         print("Parabéns, você acertou!")
         break
+### Jeito do Professor###
+fruta = "manga"
+for n in range(10):
+        chute = input(f'você tem {10-n} tentativas:Escolha uma fruta')
+        if chute == fruta:
+            print('parabéns, você acertou!')
+            break
+        elif chute == 'desisto':
+            print('ok,obrigado pela participação')
+            break
+else:
+    print('Suas Tentativas acabaram e você não acertou')
+##############################
+    
