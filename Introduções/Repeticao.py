@@ -89,5 +89,24 @@ for n in range(10):
             break
 else:
     print('Suas Tentativas acabaram e você não acertou')
-##############################
-    
+#############################
+
+
+###Part 2###
+# Nested Loops
+# Um nested loop é um loop dentro do corpo de um loop externo. No nested loop,
+# o número de iterações será igual ao número de iterações 
+# no loop externo multiplicado pelas iterações no loop interno.
+# Pos exemplo, um programa que gera todas as coordenadas de um plano com dimensões 4 por 4:
+
+for x in range(5):
+    for y in range(5):
+        print(f'({x}, {y})')
+
+#Exerc1
+
+for x in range (1,11):
+    for y in range (1,11):
+        cal = x * y
+        print(f'{x} * {y} = {cal}')
+    print('')
