@@ -14,7 +14,7 @@ Altura = float(input("Digite Sua Altura: "))
 Cal =  massa / (Altura**2)
 
 if Cal < 17:
-  print("Você Está Abaixo do Peso ;-;")
+  print("Você Está Abaixo do Peso")
 if 17.5 < Cal < 18.49:
   print("Você Está no Peso normal")
 if 18.50 < Cal < 25:

@@ -1,0 +1,31 @@
+#Argumentos: 
+A) Falso bool()
+B) 3.7 float()
+C) "Laura" Str()
+D) 7 int()
+e) "True" Str()
+f) 17 int()
+g) "17" Str()
+h) True Bool()
+i) "3.1415" str()
+#Questões
+int(b) = 3 
+float(f) = 17.0 !Usar o zero
+float(g) = 17.0 !Usar o zero
+int(i) = ERROR
+float(i) = 3.1415 # print(int(float("3.1415"))) 
+int(float(i)) = 3 #print(float("3.1415"))
+
+a) (x-10)** 2 +y/2
+b) (y%(x-10)-3)*10*(X+Y)
+
+    x -> dia de aniversário
+    y -> idade
+# x = float(input('Digite Seu dia de Aniversário: '))
+# y = float(input('Digite Sua idade: '))
+# print(x-10** 2 + y//2)
+# print((y%(x-10)-3)*10*(x+y))
+
+
+
+
