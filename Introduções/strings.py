@@ -61,3 +61,35 @@
 # print(c)
 
 # print(len(texto))
+
+#Os métodos relacionados rfind() e rindex() funcionam de forma semelhante, 
+#exceto que eles procuram a primeira ocorrência a partir do final em vez do início da string
+
+
+# Para o caso especial de verificar uma substring no início ou no final de uma string, o Python fornece os métodos startswith() e endswith():
+# poema.startswith('Todos')
+# poema.startswith('água')
+# poema.endswith('passarinho!')
+# poema.endswith('água')
+
+
+# Para substituir uma determinada substring por uma nova, pode-se utilizar o método replace().
+# frase = 'azul é minha cor favorita'
+
+# frase.replace('azul', 'amarelo')
+
+# O método isalpha() retorna True se todos os caracteres forem letras do alfabeto (a-z).
+# string = 'cinco'
+# string.isalpha() # Retorna TRUE
+
+# string = '5'
+# string.isalpha() # Retorna False
+
+
+#O método isdigit() retorna True se todos os caracteres forem dígitos, caso contrário, False.
+# string = '5'
+# string.isdigit()
+
+# string = 'cinco'
+# string.isdigit()
+
