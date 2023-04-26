@@ -105,7 +105,6 @@ while running:
     # Atualização da tela
     pygame.display.update()
 # Pausa para exibir a tela por um curto período de tempo antes de fechar
-pygame.time.wait(500)
-input()
+pygame.time.wait(100)
 # Encerramento do Pygame
 pygame.quit()
