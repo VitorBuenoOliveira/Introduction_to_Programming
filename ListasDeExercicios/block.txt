@@ -1,0 +1,21 @@
+
+'''
+#Primeira função 
+def palavras
+['eu','gosto','de','sorvete']
+
+['eu,'gosto','de','chocolate','e','também','gosto','de','pizza']
+tire as vigulas e espaços e depois coloque em formato de lista
+#Segunda função
+
+{'Eu': 1,'gosto':1,'de':1,'sorvete':1}
+
+{'Eu':1,'gosto':2,'de':2,'chocolate':1,'e':1,'também':1,'pizza':1}
+
+#Terceira função
+
+indice de similiaridade
+
+diff = 0 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 7
+i = 1- (7/11) =  0.46
+'''
