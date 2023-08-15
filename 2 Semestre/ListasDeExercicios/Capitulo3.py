@@ -63,11 +63,141 @@
 # aumento de 15 % e acima de 4000 aumento de 10 %. Escreva um programa que, 
 # dado um valor de salário, calcule o novo valor após o aumento.
 
-salario = 1000
+# salario = 2700
+
+# if salario <= 1000:
+#     salario_novo=salario*0.20
+#     print(f'Seu salario terá um aumento de {salario_novo}')
+
+# elif salario <= 2000:
+#     salario_novo=salario*0.18
+#     print(f'Seu salario terá um aumento de {salario_novo}')
 
 
-if salario == 1000:
-    salario*0.20
-    print(f'Seu novo Salario é {salario}')
-else:
-    print('nada mudou :3')
+# elif salario <= 4000:
+#     salario_novo=salario*0.20
+#     print(f'Seu salario terá um aumento de {salario_novo}')
+
+# else:
+#     salario_novo = salario * 0.10
+#     print(salario_novo)
+
+#===========================
+
+#3.8
+# ang1 = float(input("Digite o primeiro angulo: "))
+# ang2 = float(input("Digite o segundo angulo: "))
+# ang3 = float(input("Digite o terceiro angulo: "))
+
+# if ang1 == ang2 and ang2 == ang3:
+#     print('Seu triangulo é equilátero')
+# elif ang1 == ang2 or ang1==ang3 or ang2 == ang3:
+#     print('Seu triangulo é isóceles')
+# else:
+#     print('escaleno')
+#==========================
+#3.9
+# idade = int(input('Digite sua idade: '))
+
+# if idade <=3:
+#     print('Bebê')
+# elif idade <=7:
+#     print('Criança')
+# elif idade <=12:
+#     print('Pré-Adolescente')
+# elif idade <=20:
+#     print('Adolescente')
+# elif idade <=40:
+#     print('Jovem')
+# elif idade <=64:
+#     print('Meia-idade')
+# else:
+#     print('Idoso')
+#========================
+#3.10
+# idade = int(input('Digite a idade do seu cachorro: '))
+# peso = int(input('Digite o peso do seu cachorro: '))
+# if idade <= 2:
+#     if peso <= 3:
+#         idade_humana = idade * 12.5
+#     elif 10 <= peso <= 23:
+#         idade_humana = idade * 10.5
+#     else:
+#         idade_humana = idade * 9
+# else:
+#     if peso <= 3:
+#         idade_humana = 2 * 12.5 + (idade - 2) * 5.2
+#     elif 10 <= peso <= 23:
+#         idade_humana = 2 * 10.5 + (idade - 2) * 5.7
+#     else:
+#         idade_humana = 2 * 9 + (idade - 2) * 7.8
+#3.11
+# n = int(input('Digite um valor: '))
+# soma = 0 
+# for i in range(n):
+#     soma+= i ** 2
+
+# print(soma)
+# numeros_digitados = []
+# numero = float(input("Digite um número (ou 0 para finalizar): "))
+
+# while numero != 0:
+#     numeros_digitados.append(numero)
+#     numero = float(input("Digite um número (ou 0 para finalizar): "))
+
+# if numeros_digitados:
+#     soma = sum(numeros_digitados)
+#     media = soma / len(numeros_digitados)
+#     print(f"A média dos números digitados é: {media:.2f}")
+# else:
+#     print("Nenhum número foi digitado.")
+#3.12
+# numeros_digitados = []
+
+# while True:
+#     numero = float(input("Digite um número (ou 0 para finalizar): "))
+#     if numero == 0:
+#         break
+#     numeros_digitados.append(numero)
+
+# if numeros_digitados:
+#     soma = sum(numeros_digitados)
+#     media = soma / len(numeros_digitados)
+#     print(f"A média dos números digitados é: {media:.2f}")
+# else:
+#     print("Nenhum número foi digitado.")
+#=====================
+#3.13
+# n = int(input('Digite um valor: '))
+# soma = 0 
+# for i in range(n):
+#     soma+= i ** 2
+
+# print(soma)
+# numeros_digitados = []
+# numero = float(input("Digite um número (ou 0 para finalizar): "))
+
+# while numero != 0:
+#     numeros_digitados.append(numero)
+#     numero = float(input("Digite um número (ou 0 para finalizar): "))
+
+# if numeros_digitados:
+#     soma = sum(numeros_digitados)
+#     media = soma / len(numeros_digitados)
+#     print(f"A média dos números digitados é: {media:.2f}")
+# else:
+#     print("Nenhum número foi digitado.")
+#======================
+#3.14
+# celsius = int(input('Digite a temperatura em celcius: '))
+# for celsius in range(0, 101, 10):
+#     fahrenheit = celsius * 9/5 + 32
+#     print(f"{celsius}°C equivalem a {fahrenheit:.2f}°F")
+#3.15
+# tamanho = 5
+
+# for i in range(1, tamanho * 2):
+#     if i <= tamanho:
+#         print("* " * i)
+#     else:
+#         print("* " * (2 * tamanho - i))
