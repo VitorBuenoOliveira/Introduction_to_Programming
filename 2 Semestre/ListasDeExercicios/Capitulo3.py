@@ -12,11 +12,8 @@
 # print(formula)
 # ===============
 #3.2
-# lado_base = float(2)
-
-# lado_altura= float(2)
-
-# formula = lado_base * lado_altura
+# lado = int(input("Digite o valor do lado: "))
+# formula = lado ** 2
 
 
 # print(formula)
