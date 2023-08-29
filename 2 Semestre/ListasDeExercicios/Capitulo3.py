@@ -131,6 +131,7 @@
 #         idade_humana = 2 * 10.5 + (idade - 2) * 5.7
 #     else:
 #         idade_humana = 2 * 9 + (idade - 2) * 7.8
+#====================
 #3.11
 # n = int(input('Digite um valor: '))
 # soma = 0 
@@ -151,6 +152,7 @@
 #     print(f"A média dos números digitados é: {media:.2f}")
 # else:
 #     print("Nenhum número foi digitado.")
+#=====================
 #3.12
 # numeros_digitados = []
 
