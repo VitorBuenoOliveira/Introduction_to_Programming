@@ -1,13 +1,25 @@
-def test_number(number):
+# def contador_letra(texto, letra):
+#     contador = 0
 
-    a = 0 
-    b = number % 2
+#     for caractere in texto:
+#         if caractere == letra:
+#             contador += 1 
+#     return contador
 
-    if b == 0 :
-        a = print("Par")
-    else:
-        a = print("Impar")
-    return a 
+# text = 'Exemplo de texto'
 
-resp = int(input('Digite um numero: '))
-test_number(resp)
+# letra_contar = 'x'
+
+# resultado = contador_letra(text,letra_contar)
+
+# print(f"A letra {letra_contar} aparece {resultado} vezes no texto. ")
+
+# padrao = 7
+
+# for i in range(1, padrao):
+#     print('*' * i)
+
+# for i in range(padrao, 0 , -1):
+#     print('*' * i)
+
+
