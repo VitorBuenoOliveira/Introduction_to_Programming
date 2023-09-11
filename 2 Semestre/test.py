@@ -23,3 +23,20 @@
 #     print('*' * i)
 
 
+
+# def id_var(var):
+#     a = type(var)
+#     if a == int:
+#         b = print('int')
+#     elif a == str:
+#         b = print('string')
+#     elif a == bool:
+#         b = print('bool')
+#     elif a == float:
+#         b = print('float')
+#     else:
+#         b =print('não é nada')
+#     return b 
+
+
+# id_var(True)
