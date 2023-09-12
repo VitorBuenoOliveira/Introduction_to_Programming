@@ -40,3 +40,13 @@
 
 
 # id_var(True)
+
+#Usanndo Enumerate
+# impares = []
+
+# for i in range(1,101,2):
+#     impares.append(i)
+# print(impares)
+# for i, v in enumerate(impares):#
+#     impares[i]=v+1
+# print(impares)
