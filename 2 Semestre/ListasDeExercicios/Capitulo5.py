@@ -291,6 +291,254 @@ primos.extend([23, 29, 31])
 print(primos)
 ###########################
 #5.19
+lista = [1, 2, 3, 4, 5]
+reverso = lista[::-1]
+print(reverso)
+###########################
+#5.20
+original_lista = [1, 2, 3, 4, 5]
+inverted_lista = [original_lista[i] for i in range(len(original_lista) - 1, -1, -1)]
+
+print(inverted_lista)
+###########################
+#5.21
+lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+metade_primeira_lista = lista[:5]
+
+print(metade_primeira_lista)
+##########################
+#5.22
+lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+lista = lista[5:]
+
+print(lista)
+##########################
+#5.23
+lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+primeira_metade_invertida = lista[:5][::-1]
+
+segunda_metade = lista[5:]
+
+lista = primeira_metade_invertida + segunda_metade
+
+print(lista)
+############################
+#5.24
+lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+segunda_metade = lista[5:]
+primeira_metade_invertida = lista[:5][::-1]
+
+lista = segunda_metade + primeira_metade_invertida
+
+print(lista)
+############################
+#5.25
+numeros_desejados = []
+
+for numero in range(100, 1001):
+    if numero % 7 == 0 and numero % 3 != 0:
+        numeros_desejados.append(numero)
+
+print(numeros_desejados)
+############################
+#5.26
+numeros = []
+
+while True:
+    entrada = input("Digite um número (ou 'parar' para encerrar): ")
+    if entrada.lower() == 'parar':
+        break
+    
+    try:
+        numero = float(entrada)
+        numeros.append(numero)
+    except ValueError:
+        print("Entrada inválida. Por favor, digite um número válido.")
+if not numeros:
+    print("Nenhum número foi digitado.")
+else:
+    media = sum(numeros) / len(numeros)
+    print(f"A média dos números digitados é: {media:.2f}")
+###############################
+#5.27
+num_linhas = 3
+num_colunas = 3
+
+matriz = []
+
+for i in range(num_linhas):
+    linha = []
+    
+    for j in range(num_colunas):
+        valor = i * num_colunas + j
+        linha.append(valor)
+    
+    matriz.append(linha)
+for linha in matriz:
+    print(linha)
+##############################
+#5.28
+dimensao1 = 2
+dimensao2 = 3
+dimensao3 = 4
+
+matriz_tridimensional = [[[0 for _ in range(dimensao3)] for _ in range(dimensao2)] for _ in range(dimensao1)]
+
+for i in range(dimensao1):
+    for j in range(dimensao2):
+        for k in range(dimensao3):
+            print(matriz_tridimensional[i][j][k], end=' ')
+        print()
+    print()
+##############################
+#5.29
+estados = {
+    "Acre": "AC",
+    "Alagoas": "AL",
+    "Amapá": "AP",
+    "Amazonas": "AM",
+    "Bahia": "BA",
+    "Ceará": "CE",
+    "Distrito Federal": "DF",
+    "Espírito Santo": "ES",
+    "Goiás": "GO",
+    "Maranhão": "MA",
+    "Mato Grosso": "MT",
+    "Mato Grosso do Sul": "MS",
+    "Minas Gerais": "MG",
+    "Pará": "PA",
+    "Paraíba": "PB",
+    "Paraná": "PR",
+    "Pernambuco": "PE",
+    "Piauí": "PI",
+    "Rio de Janeiro": "RJ",
+    "Rio Grande do Norte": "RN",
+    "Rio Grande do Sul": "RS",
+    "Rondônia": "RO",
+    "Roraima": "RR",
+    "Santa Catarina": "SC",
+    "São Paulo": "SP",
+    "Sergipe": "SE",
+    "Tocantins": "TO"
+}
+
+def obter_sigla(estado):
+    return estados.get(estado, "Estado não encontrado")
+
+nome_estado = input("Digite o nome de um estado brasileiro: ")
+
+sigla = obter_sigla(nome_estado)
+
+print(f"A sigla de {nome_estado} é: {sigla}")
+
+###########################
+#5.30
+estados = {
+    "acre": "AC",
+    "alagoas": "AL",
+    "amapá": "AP",
+    "amazonas": "AM",
+    "bahia": "BA",
+    "ceará": "CE",
+    "distrito federal": "DF",
+    "espírito santo": "ES",
+    "goiás": "GO",
+    "maranhão": "MA",
+    "mato grosso": "MT",
+    "mato grosso do sul": "MS",
+    "minas gerais": "MG",
+    "pará": "PA",
+    "paraíba": "PB",
+    "paraná": "PR",
+    "pernambuco": "PE",
+    "piauí": "PI",
+    "rio de janeiro": "RJ",
+    "rio grande do norte": "RN",
+    "rio grande do sul": "RS",
+    "rondônia": "RO",
+    "roraima": "RR",
+    "santa catarina": "SC",
+    "são paulo": "SP",
+    "sergipe": "SE",
+    "tocantins": "TO"
+}
+
+def obter_sigla(estado):
+    estado = estado.lower()
+    return estados.get(estado, "Estado não encontrado")
+
+nome_estado = input("Digite o nome de um estado brasileiro: ")
+
+sigla = obter_sigla(nome_estado)
+
+print(f"A sigla de {nome_estado.capitalize()} é: {sigla.upper()}")
+#################################
+#5.31
+
+tupla_numeros = tuple(numero for numero in range(100, 1001) if numero % 7 == 0 and numero % 3 != 0)
+print(tupla_numeros)
+################################
+#5.32
+import random
+
+def gerar_coordenadas_aleatorias(num_coordenadas):
+    coordenadas = [(random.uniform(0, 1), random.uniform(0, 1)) for _ in range(num_coordenadas)]
+    return coordenadas
+
+def calcular_pi(coordenadas):
+    dentro_circulo = 0
+    
+    for x, y in coordenadas:
+        distancia = x**2 + y**2
+        if distancia <= 1:
+            dentro_circulo += 1
+    
+    pi = (dentro_circulo / len(coordenadas)) * 4
+    return pi
+
+num_coordenadas = int(input("Digite o número de coordenadas a serem geradas: "))
+coordenadas = gerar_coordenadas_aleatorias(num_coordenadas)
+pi = calcular_pi(coordenadas)
+
+print(f"Valor estimado de Pi usando {num_coordenadas} coordenadas: {pi}")
+###########################
+#5.33
+def encontrar_aeroporto(cidade, aeroportos):
+    for aeroporto in aeroportos:
+        if aeroporto[0] == cidade:
+            return aeroporto[1]
+    return "Aeroporto não encontrado."
+
+aeroportos = [
+    ("São Paulo", "GRU"),
+    ("Rio de Janeiro", "GIG"),
+    ("Brasília", "BSB"),
+    ("Salvador", "SSA"),
+    ("Fortaleza", "FOR"),
+    ("Belo Horizonte", "CNF"),
+    ("Recife", "REC"),
+    ("Curitiba", "CWB"),
+    ("Manaus", "MAO"),
+    ("Porto Alegre", "POA")
+]
+
+cidade = input("Digite o nome da cidade: ")
+codigo_aeroporto = encontrar_aeroporto(cidade, aeroportos)
+
+if codigo_aeroporto != "Aeroporto não encontrado.":
+    print(f"O código do aeroporto de {cidade} é {codigo_aeroporto}.")
+else:
+    print(codigo_aeroporto)
+#################################
+
+
+
+
+
+
+
 
 
 
