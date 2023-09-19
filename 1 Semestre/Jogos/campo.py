@@ -43,3 +43,4 @@ num_minas = 5
 
 campo_minado = criar_campo_minado(linhas, colunas, num_minas)
 exibir_campo_minado(campo_minado)
+
