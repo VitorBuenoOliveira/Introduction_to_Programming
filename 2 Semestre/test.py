@@ -50,3 +50,8 @@
 # for i, v in enumerate(impares):#
 #     impares[i]=v+1
 # print(impares)
+
+# from random import randint
+
+# num = randint(1, 10)
+# print(num)
