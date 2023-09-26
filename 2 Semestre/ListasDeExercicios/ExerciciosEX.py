@@ -38,6 +38,24 @@ for linha in resultado:
 
 
 #4
+#jeito do professor
+# def e_simetrica(matriz:list) -> bool:
+#     tam = len(matriz)
+#     for i in range(tam):
+#         for j in range(tam):
+#             if i !=j and matriz[i][j] != matriz[j][i]:
+#                 return False
+#     return True
+# matriz = [
+#     [1,2,4],
+#     [2,5,6],
+#     [4,6,7]
+# ]
+
+# print(e_simetrica(matriz))
+
+########################
+
 def matriz_simetrica(matriz):
     num_linhas = len(matriz)
     num_colunas = len(matriz[0])
@@ -67,37 +85,14 @@ print(matriz_simetrica(matriz_simetrica1))
 print(matriz_simetrica(matriz_simetrica2)) 
 
 #5
-def calcular_media_matriz(matriz):
-    if not matriz:
-        return None
-
+def media_matriz(matriz:list) -> float:
+    qtd = 0
     soma = 0
-    contador = 0
-
     for linha in matriz:
-        for elemento in linha:
-            soma += elemento
-            contador += 1
-
-    if contador > 0:
-        media = soma / contador
-        return media
-    else:
-        return None
-
-matriz_exemplo = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-media = calcular_media_matriz(matriz_exemplo)
-
-if media is not None:
-    print(f'A média dos elementos da matriz é: {media}')
-else:
-    print('A matriz está vazia, a média não pode ser calculada.')
-
+        soma += sum(linha)
+        qtd += len(linha)
+    media = soma / qtd
+    return media
 #intermediario
 #1
 def produto_escalar(vetor1, vetor2):
@@ -117,43 +112,82 @@ vetor2 = [4, 5, 6]
 resultado = produto_escalar(vetor1, vetor2)
 print(f'O produto escalar entre os vetores é: {resultado}')
 #2
-def multiplicar_matriz_por_escalar(matriz, escalar):
-    resultado = []
-    for linha in matriz:
-        nova_linha = [elemento * escalar for elemento in linha]
-        resultado.append(nova_linha)
-    return resultado
+#Jeito do Professor
+#def produto_escalar(matriz:list,escalar:int) -> list:
+#     for i in range(len(matriz)):
+#         for j in range(len(matriz[i])):
+#             matriz[i][j] *= escalar
 
-matriz_original = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+#     return matriz
 
-escalar = 2
-resultado = multiplicar_matriz_por_escalar(matriz_original, escalar)
+# matriz = [
+#     [1,2,4],
+#     [2,5,6],
+#     [4,6,7]
+# ]
 
-for linha in resultado:
-    print(linha)
+# print(produto_escalar(matriz,5))
+#####################################       
+
+# def multiplicar_matriz_por_escalar(matriz, escalar):
+#     resultado = []
+#     for linha in matriz:
+#         nova_linha = [elemento * escalar for elemento in linha]
+#         resultado.append(nova_linha)
+#     return resultado
+
+# matriz_original = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+
+# escalar = 2
+# resultado = multiplicar_matriz_por_escalar(matriz_original, escalar)
+
+# for linha in resultado:
+#     print(linha)
+#################################
+
 
 #3
-def matriz_identidade(n):
-    if n <= 0:
-        raise ValueError("A ordem da matriz identidade deve ser um número inteiro positivo.")
+# def matriz_identidade(n):
+#     if n <= 0:
+#         raise ValueError("A ordem da matriz identidade deve ser um número inteiro positivo.")
 
-    identidade = [[0] * n for _ in range(n)]
+#     identidade = [[0] * n for _ in range(n)]
 
-    for i in range(n):
-        identidade[i][i] = 1
+#     for i in range(n):
+#         identidade[i][i] = 1
 
-    return identidade
+#     return identidade
 
-ordem = 3  
+# ordem = 3  
 
-matriz_resultante = matriz_identidade(ordem)
+# matriz_resultante = matriz_identidade(ordem)
 
-for linha in matriz_resultante:
-    print(linha)
+# for linha in matriz_resultante:
+#     print(linha)
+
+
+#Exerc9
+def determinante(matriz:list) -> int:
+    dp = 1
+    ds = 1
+    for i, l in enumerate(matriz):
+        for j, v in enumerate(l):
+            if i == j:
+                dp *= matriz[i][j]
+            else:
+                ds *= matriz[i][j]
+    return dp - ds
+
+matriz = [
+    [1,2],
+    [3,4],
+]
+
+print(determinante(matriz))
 
 
 
