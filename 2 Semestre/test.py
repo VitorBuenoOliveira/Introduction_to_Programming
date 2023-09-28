@@ -55,3 +55,20 @@
 
 # num = randint(1, 10)
 # print(num)
+
+import numpy as np
+
+def encontrar_autovalores_e_autovetores(matriz):
+    autovalores, autovetores = np.linalg.eig(matriz)
+    return autovalores, autovetores
+
+matriz = np.array([[2, -1],
+                   [4,  3]])
+
+autovalores, autovetores = encontrar_autovalores_e_autovetores(matriz)
+
+print("Autovalores:")
+print(autovalores)
+
+print("\nAutovetores:")
+print(autovetores)

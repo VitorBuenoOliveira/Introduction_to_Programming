@@ -94,7 +94,7 @@ def media_matriz(matriz:list) -> float:
     media = soma / qtd
     return media
 #intermediario
-#1
+#6
 def produto_escalar(vetor1, vetor2):
     if len(vetor1) != len(vetor2):
         raise ValueError("Os vetores devem ter o mesmo comprimento")
@@ -111,7 +111,7 @@ vetor2 = [4, 5, 6]
 
 resultado = produto_escalar(vetor1, vetor2)
 print(f'O produto escalar entre os vetores é: {resultado}')
-#2
+#7
 #Jeito do Professor
 #def produto_escalar(matriz:list,escalar:int) -> list:
 #     for i in range(len(matriz)):
@@ -150,7 +150,7 @@ print(f'O produto escalar entre os vetores é: {resultado}')
 #################################
 
 
-#3
+#8
 # def matriz_identidade(n):
 #     if n <= 0:
 #         raise ValueError("A ordem da matriz identidade deve ser um número inteiro positivo.")
@@ -188,35 +188,198 @@ matriz = [
 ]
 
 print(determinante(matriz))
+#########################
 
+#10
+def multiply_matrices(matrix1, matrix2):
+    if len(matrix1[0]) != len(matrix2):
+        raise ValueError("O número de colunas da matriz 1 deve ser igual ao número de linhas da matriz 2")
 
+    result = [[0 for _ in range(len(matrix2[0]))] for _ in range(len(matrix1))]
 
+    for i in range(len(matrix1)):
+        for j in range(len(matrix2[0])):
+            for k in range(len(matrix2)):
+                result[i][j] += matrix1[i][k] * matrix2[k][j]
 
+    return result
+#######################
 
+#11
+def produto_vetorial(vetor1, vetor2):
+    if len(vetor1) != 3 or len(vetor2) != 3:
+        raise ValueError("Ambos os vetores devem ser tridimensionais (compostos por três componentes)")
 
+    resultado = [
+        vetor1[1] * vetor2[2] - vetor1[2] * vetor2[1],
+        vetor1[2] * vetor2[0] - vetor1[0] * vetor2[2],
+        vetor1[0] * vetor2[1] - vetor1[1] * vetor2[0]
+    ]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return resultado    
 ##########
+
+#12
+import numpy as np
+
+def encontrar_autovalores_e_autovetores(matriz):
+    autovalores, autovetores = np.linalg.eig(matriz)
+    return autovalores, autovetores
+
+matriz = np.array([[2, -1],
+                   [4,  3]])
+
+autovalores, autovetores = encontrar_autovalores_e_autovetores(matriz)
+
+print("Autovalores:")
+print(autovalores)
+
+print("\nAutovetores:")
+print(autovetores)
+################3
+#13
+def print_matrix(matrix):
+    for row in matrix:
+        print(" ".join(map(str, row)))
+
+def gauss_elimination(matrix):
+    n = len(matrix)
+
+    for i in range(n):
+        max_row = i
+        for j in range(i + 1, n):
+            if abs(matrix[j][i]) > abs(matrix[max_row][i]):
+                max_row = j
+
+        matrix[i], matrix[max_row] = matrix[max_row], matrix[i]
+
+        pivot = matrix[i][i]
+        for j in range(i, n + 1):
+            matrix[i][j] /= pivot
+
+        for k in range(n):
+            if k != i:
+                factor = matrix[k][i]
+                for j in range(i, n + 1):
+                    matrix[k][j] -= factor * matrix[i][j]
+
+    return [row[-1] for row in matrix]
+
+# 2x + 3y - z = 1
+# 4x + y + 2z = 2
+# 3x + 2y + 3z = 3
+
+augmented_matrix = [
+    [2, 3, -1, 1],
+    [4, 1, 2, 2],
+    [3, 2, 3, 3]
+]
+
+solution = gauss_elimination(augmented_matrix)
+
+print("Solução do sistema:")
+for i, x in enumerate(solution):
+    print(f"x{i + 1} = {x}")
+#############
+#14
+import numpy as np
+
+def matrix_inverse(matrix):
+    try:
+        if matrix.shape[0] != matrix.shape[1]:
+            raise ValueError("A matriz não é quadrada")
+
+        adjoint = np.linalg.inv(matrix)
+
+        return adjoint
+    except np.linalg.LinAlgError:
+        raise ValueError("A matriz não possui matriz inversa")
+
+matrix = np.array([[2, 3, -1],
+                  [4, 1, 2],
+                  [3, 2, 3]])
+
+inverse = matrix_inverse(matrix)
+
+print("Matriz Original:")
+print(matrix)
+
+print("Matriz Inversa:")
+print(inverse)
+##########
+#15
+import numpy as np
+
+def jacobi_eigenvalue(A, tol=1e-6, max_iter=100):
+    n = len(A)
+    eigenvalues = np.zeros(n)
+    iterations = 0
+
+    while True:
+        max_val = 0
+        for i in range(n):
+            for j in range(i+1, n):
+                if abs(A[i][j]) > max_val:
+                    max_val = abs(A[i][j])
+                    p, q = i, j
+
+        if max_val < tol or iterations >= max_iter:
+            break
+
+        theta = 0.5 * np.arctan2(2 * A[p][q], A[q][q] - A[p][p])
+
+        rotation = np.identity(n)
+        rotation[p][p] = np.cos(theta)
+        rotation[q][q] = np.cos(theta)
+        rotation[p][q] = -np.sin(theta)
+        rotation[q][p] = np.sin(theta)
+
+        A = np.dot(np.dot(rotation.T, A), rotation)
+
+        iterations += 1
+
+    eigenvalues = np.diag(A)
+
+    return eigenvalues
+
+matrix = np.array([[4, -2, 2],
+                   [-2, 2, -4],
+                   [2, -4, 11]])
+
+eigenvalues = jacobi_eigenvalue(matrix)
+
+print("Autovalores:")
+print(eigenvalues)
+########################3
+#Campo minado
+
+from random import randint
+
+def criar_campo(tamanho:int) -> list:
+    campo_minado = []
+    for i in range(tamanho):
+        linha = []
+        bomba1= randint(0,tamanho-1)
+        bomba2 = randint(0,tamanho-1)
+        for i in range(tamanho):
+            linha.append('@' if i == bomba1 or i == bomba2 else '')
+        campo_minado.append(linha)
+
+    return campo_minado
+
+def menu() -> int:
+    tamanho_matriz = 0
+    continua = True
+    while continua:
+        tamanho_matriz = int(input('Qual o tamanho da matriz: '))
+        continua = tamanho_matriz < 5
+        print('Tamanho inválido' if continua else '')
+    return tamanho_matriz
+
+def exibir(matriz:list) -> None:
+    for linha in matriz:
+        print(linha)
+
+tamanho = menu()
+cm = criar_campo(tamanho)
+exibir(cm)
