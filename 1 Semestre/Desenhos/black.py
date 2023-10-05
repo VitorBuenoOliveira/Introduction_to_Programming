@@ -2,7 +2,7 @@ import turtle
 t = turtle.Turtle()
 move = 1
 for i in range(360):
-    t.speed(500)
+    t.speed(1000)
     t.pendown()
     t.right(move)
     t.forward(100)
