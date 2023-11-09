@@ -3,7 +3,7 @@ def herdeiros(familia):
         herdeiros = [p['nome'] for p in familia if p['pai'] == pai]
         if not herdeiros:
             return ""
-        herdeiros_str = '   -> '.join(herdeiros)
+        herdeiros_str = ' -> '.join(herdeiros)
         for herdeiro in herdeiros:
             descendentes = encontrar_herdeiros(familia, herdeiro)
             if descendentes:
@@ -20,3 +20,7 @@ minhaFamilia = [
 ]
 
 print(herdeiros(minhaFamilia))  # 'Eduardo -> Lucas -> Pedro -> João'
+print(herdeiros([minhaFamilia[0]]))  # 'Eduardo'
+print(herdeiros(minhaFamilia[0:3]))  # 'Eduardo -> Lucas -> Pedro'
+print(herdeiros(minhaFamilia[1:3]))  # 'Lucas -> Pedro -> João'
+
