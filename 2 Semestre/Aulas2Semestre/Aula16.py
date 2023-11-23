@@ -19,15 +19,10 @@ def mix(s1, s2):
                 dicionario[i] += 1
             else:
                 dicionario[i] = 1
-    filtros1={}
-    for K in sorted(dicionario,key=dicionario.get,reverse=True):
-        if dicionario[K]>1:
-            filtros1[K]=dicionario[K]
 
+    return {k: v for k, v in sorted(dicionario.items(), reverse=True) if v > 1}
 
-    return filtros1
-
-s1 = 'eduardo'
+s1 = 'edduardo'
 s2 = 'mendes'
 print(mix(s1, s2))
 
@@ -41,6 +36,5 @@ print(mix(s1, s2))
 #             count_dict[char] = 1
 #     return count_dict
 
-# # Testing the function
 # print(count("test")) # Output: {'a': 2, 'b': 1}
 # print(count(""))     # Output: {}
