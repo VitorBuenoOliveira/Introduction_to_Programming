@@ -149,7 +149,7 @@ Para cada string, ele adiciona uma nova string à lista resultado. Essa nova str
 ela imprime todas as possibilidades de equilibrar 4 pares de parênteses.
 '''
 
-def count_change(amount, denominations):
+def count_change( amount, denominations):
     count = [0] * (amount + 1)
     count[0] = 1
 
