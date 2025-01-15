@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botão Travesso</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #botao, #botao-sim {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #000;
+        cursor: pointer;
+    }
+
+    #botao {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Hoje tem?</h1>
+    <button id="botao-sim">SIM</button>
+</div>
+<button id="botao">Não</button>
+
+<script>
+var botao = document.getElementById("botao");
+var botaoSim = document.getElementById("botao-sim");
+
+function moverBotao() {
+    var novoTop = Math.random() * window.innerHeight;
+    var novoLeft = Math.random() * window.innerWidth;
+    botao.style.top = novoTop + "px";
+    botao.style.left = novoLeft + "px";
+}
+
+function exibirMensagem() {
+    var mensagem = document.createElement('div');
+    mensagem.innerHTML = "<p>Você clicou em SIM!</p>";
+    mensagem.style.cssText = "position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #007bff; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);";
+    document.body.appendChild(mensagem);
+    setTimeout(function() {
+        mensagem.remove();
+    }, 2000); // Remove a mensagem após 2 segundos
+}
+
+function calcularDistancia(elemento, mouseX, mouseY) {
+    var elementoRect = elemento.getBoundingClientRect();
+    var elementoX = elementoRect.left + elementoRect.width / 2;
+    var elementoY = elementoRect.top + elementoRect.height / 2;
+    var distanciaX = mouseX - elementoX;
+    var distanciaY = mouseY - elementoY;
+    return Math.sqrt(distanciaX * distanciaX + distanciaY * distanciaY);
+}
+
+document.addEventListener("mousemove", function(event) {
+    var distanciaMinima = 45; // Defina a distância mínima para o botão mudar de posição
+    var distancia = calcularDistancia(botao, event.clientX, event.clientY);
+    if (distancia < distanciaMinima) {
+        moverBotao();
+    }
+});
+
+botao.addEventListener("click", moverBotao);
+botaoSim.addEventListener("click", exibirMensagem);
+</script>
+
+</body>
+</html>
